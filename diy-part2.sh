@@ -24,7 +24,7 @@ make defconfig
 # File name: diy-part2.sh
 # Description: OpenWrt DIY script part 2 (After Update feeds)
 #
-uci batch <<-EOF
+	uci batch <<-EOF
 	del system.ntp
 	set system.ntp=timeserver
         add_list system.ntp.server='0.asia.pool.ntp.org'
@@ -32,7 +32,7 @@ uci batch <<-EOF
 	set system.ntp.enabled=1
 	set system.ntp.enable_server=1
 	commit system
-EOF
+	EOF
 
 	uci batch <<-EOF
 	set firewall.@zone[1].input="ACCEPT"
