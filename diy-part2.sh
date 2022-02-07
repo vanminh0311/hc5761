@@ -32,10 +32,9 @@ uci batch <<-EOF
 	set system.ntp.enabled=1
 	set system.ntp.enable_server=1
 	commit system
-	
 EOF
 
-uci batch <<-EOF
+	uci batch <<-EOF
 	set firewall.@zone[1].input="ACCEPT"
 	commit firewall
 	EOF
@@ -65,5 +64,4 @@ echo "DISTRIB_DESCRIPTION='Router'" >> /etc/openwrt_release
 
 # Modify default THEME
 #sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' ./feeds/luci/collections/luci/Makefile
-# Modify default PASSWORD
-sed -i 's/$1$V4UetPzk$CYXluq4wUazHjmCDBCqXF./$1$BtNu28UV$VAZEz4CDe1k7Dvar7Ftji0/g' ./package/lean/default-settings/files/zzz-default-settings
+
