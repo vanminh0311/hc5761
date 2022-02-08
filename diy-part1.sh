@@ -14,7 +14,7 @@
 #sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
 
 # Add a feed source
-git clone https://github.com/aliass532/luci-app-eqos package/eqos
+#git clone https://github.com/aliass532/luci-app-eqos package/eqos
 
 ##src-git packages https://git.lede-project.org/feed/packages.git
 #src-git luci https://git.lede-project.org/project/luci.git
@@ -29,8 +29,8 @@ git clone https://github.com/aliass532/luci-app-eqos package/eqos
 #src-git wifimedia https://github.com/wifimedia/lede_wifimedia.git;wr841v13
 #src-git wifimedia https://github.com/wifimedia/lede_wifimedia.git;wr840v4
 #src-git wifimedia https://github.com/wifimedia/lede_wifimedia.git;wr940v5
-git wifimedia https://github.com/wifimedia/lede_wifimedia.git;wifimedia_ex
-git luci https://github.com/wifimedia/luci-17.git;WRT
+sed -i '$a src-git wifimedia https://github.com/wifimedia/lede_wifimedia.git;wifimedia_ex
+sed -i '$a src-git luci https://github.com/wifimedia/luci-17.git;WRT
 
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
