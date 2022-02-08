@@ -39,7 +39,7 @@ sed -i 's/192.168.1.1/172.16.1.1/g' package/base-files/files/bin/config_generate
 
 #sed -i "s/add_list system.ntp.server='time.windows.com'" package/base-files/files/bin/config_generate        
 #sed -i "s/hostname='WiFi'/" package/base-files/files/bin/config_generate
-sed -i "/# REVISION:=/REVISION:=$date/" include/version.mk
-sed -i "/DISTRIB_DESCRIPTION/c\DISTRIB_DESCRIPTION=\"%D %C Router'\"" package/base-files/files/etc/openwrt_release
-#sed -i "s/timezone='UTC'/timezone='CST-7'/" package/base-files/files/bin/config_generate
-sed -i "/timezone='CST-7'/a \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ set system.@system[-1].zonename='Asia/Ho Chi Minh'" package/base-files/files/bin/config_generate
+#sed -i "/# REVISION:=/REVISION:=$date/" include/version.mk
+sed -i "/DISTRIB_DESCRIPTION/c\DISTRIB_DESCRIPTION=\"Router\"" package/base-files/files/etc/openwrt_release
+sed -i "s/timezone='UTC'/timezone='CST-7'/" package/base-files/files/bin/config_generate
+#sed -i "/timezone='CST-7'/a \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ set system.@system[-1].zonename='Asia/Ho Chi Minh'" package/base-files/files/bin/config_generate
