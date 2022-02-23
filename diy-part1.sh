@@ -29,8 +29,8 @@
 #src-git wifimedia https://github.com/wifimedia/lede_wifimedia.git;wr841v13
 #src-git wifimedia https://github.com/wifimedia/lede_wifimedia.git;wr840v4
 #src-git wifimedia https://github.com/wifimedia/lede_wifimedia.git;wr940v5
-git clone wifimedia https://github.com/wifimedia/
-git clone luci https://github.com/wifimedia/
+#git clone wifimedia https://github.com/wifimedia/
+#git clone luci https://github.com/wifimedia/
 
 #sed -i '$a src-git lienol https://github.com/Lienol/openwrt-package' feeds.conf.default
 #sed -i '$a src-git helloworld https://github.com/fw876/helloworld' feeds.conf.default
